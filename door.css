@@ -1,0 +1,36 @@
+/* Common styles for both mobile and PC */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* PC display: 4 columns */
+@media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Mobile display: 2 columns */
+@media (max-width: 767px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

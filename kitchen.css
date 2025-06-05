@@ -1,0 +1,60 @@
+/* Reset some default browser margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Container for the images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Image gallery container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Styling each image */
+.gallery img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for images */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Media query for large screens */
+@media (min-width: 768px) {
+    .gallery {
+        justify-content: flex-start;
+    }
+
+    .gallery img {
+        max-width: 200px;
+    }
+}
+
+/* Media query for very large screens */
+@media (min-width: 1200px) {
+    .gallery img {
+        max-width: 250px;
+    }
+}
